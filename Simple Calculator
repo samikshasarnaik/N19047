@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "*****Simple Calculator*******" << endl;
+    char op;
+    float sum,difference,product,factorial,division,num1,num2;
+    cout<<"Enter the numbers:";
+    cin>>num1>>num2;
+    cout<<"Enter the opertation to be performed:";
+    cin>>op;
+    switch (op)
+    {
+    case '+':
+        sum=num1 + num2;
+        cout<<"sum:"<<sum;
+        break;
+    case '-':
+        difference=num1-num2;
+        cout<<"difference:"<<difference;
+        break;
+    case '*':
+        product= num1 * num2;
+        cout<<"product:"<<product;
+        break;
+    case '/':
+        division=num1/num2;
+        cout<<"Quotient:"<<division;
+        break;
+    case '!':
+        factorial=1;
+        for(int a=1; a<=num1;a++)
+        {
+            factorial=factorial*a;
+        }
+        cout << " factorial:"<<factorial;
+        break;
+
+
+    default :
+        cout<<"Operator not found";
+        break;
+    }
+    return 0;
+}
