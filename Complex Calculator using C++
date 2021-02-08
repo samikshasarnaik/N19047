@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a1,a2,b1,b2;
+    char ch;
+    cout << "*********Complex Calculator************" << endl;
+    cout<<"Enter the real part of first number";
+    cin>>a1;
+    cout<<"Enter the imaginary part of first number";
+    cin>>b1;
+    cout<<"Enter the real part of second number";
+    cin>>a2;
+    cout<<"Enter the imaginary part of second number";
+    cin>>b2;
+    cout<<"\n First complex"<<a1<<"+"<<"i"<<b1;
+    cout<<"\n Second complex"<<a2<<"+"<<"i"<<b2;
+    cout<<"\n Enter the operator:";
+    cin>>ch;
+        switch (ch)
+    {
+    case '+':
+        int rsum,isum;
+        rsum=a1+a2;
+        isum=b1+b2;
+
+        cout<<"sum:"<<rsum<<"+"<<isum<<"i";
+        break;
+    case '-':
+        int rdiff,idiff;
+        rdiff=a1-a2;
+        idiff=b1-b2;
+
+        cout<<"difference:"<<rdiff<<"+"<<idiff<<"i";
+        break;
+    case '*':
+        int a,b;
+        a=a1*a2+(-1)*b1*b2;
+        b=(a1*b1+a2*b2);
+
+        cout<<"product:"<<a<<"+"<<b<<"("<<"i"<<")";
+        break;
+    case '/':
+        float t,u,v,y;
+        t=a1*a2/(a2*a2+b2*b2);
+        u=(a2*b1-a1*b2)/(a2*a2+b2*b2);
+        v=b1*b2/(a2*a2+b2*b2);
+        y=t+v;
+        cout<<"Division:"<<y<<"+"<<"i"<<u<<"+";
+        break;
+    case '@':
+        float w,x;
+        w=-b1;
+        x=-b2;
+        cout<<"\nConjugate of first number"<<a1<<"(+)"<<w;
+        cout<<"\nConjugate of first number"<<a2<<"(+)"<<x;
+        break;
+    default :
+        cout<<"Operator not found";
+        break;
+    }
+
+
+    return 0;
+}
